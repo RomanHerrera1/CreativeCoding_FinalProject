@@ -14,6 +14,7 @@ def index():
 def home():
     return render_template('initialScreen.html')
 
+@app.route('/home', methods=['POST'])
 @app.route('/', methods=['POST'])
 def submit():
     # Get the user's name from the submitted form
@@ -73,7 +74,9 @@ def bid(image_name, bidder_name):
             session[f'{image_name}_highest_bidder'] = bidder_name
 
         return redirect(url_for('images', name=bidder_name, images=images))
-    return render_template('bid.html', name=bidder_name, image_name=image_name)
+    filename_parts = image_name.lower().split()  # convert to lowercase and split into parts
+    filename = "_".join(filename_parts) 
+    return render_template('bid.html', name=bidder_name, image_name=image_name, filename=filename)
 
 def get_images():
     images = []

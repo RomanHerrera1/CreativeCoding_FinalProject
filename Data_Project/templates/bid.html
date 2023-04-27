@@ -4,7 +4,7 @@
 {% block content %}
   <h1 style="text-align: center; font-size: 36px;">Bidding on {{ image_name }}</h1>
   <h2 style="text-align: center; font-size: 24px; color: gray">Bidding as {{ name }}</h2>
-  <img src="{{ url_for('static', filename='images/' + image_name + '.jpg') }}" alt="{{ image_name }}"  width="400" style="display: block; margin: 0 auto;">
+  <img src="{{ url_for('static', filename='images/' + filename + '.jpg') }}" alt="{{ image_name }}"  width="400" style="display: block; margin: 0 auto;">
   <p style="text-align: center; font-size: 18px;">Current highest bid: {{ session.get(image_name + '_highest_bid', 0) }} by {{ session.get(image_name + '_highest_bidder', 'No one yet') }}</p>
 
   <form method="POST" style="display: flex; flex-direction: column; align-items: center;">
