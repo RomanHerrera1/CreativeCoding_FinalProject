@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Global Art Map</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYPSqaGxAw2iN83-0zPH25lcB84qw068M&libraries=places&callback=initMap"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <h1>Where are you from?</h1>
+    <form>
+      <label for="address-input">Enter your address:</label>
+      <input type="text" id="address-input" name="address">
+      <label for="city-input">Enter your city:</label>
+      <input type="text" id="city-input" name="city">
+      <label for="state-input">Enter your state:</label>
+      <input type="text" id="state-input" name="state">
+      <label for="county-input">Enter your county:</label>
+      <input type="text" id="county-input" name="county">
+      <button type="button" onclick="submitCounty()">Submit</button>
+    </form>
+    <div id="map" style="height: 500px; width: 100%;"></div>
+    <div id="stats"></div>
+    <script src="static/script.js"></script>
+  </body>
+</html>

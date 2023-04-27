@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+max-width: 800px;
+margin: 0 auto;
+}
+
+.header {
+background-color: #333;
+color: #fff;
+padding: 10px;
+text-align: center;
+}
+
+.form-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 80vh;
+}
+
+.form-container label,
+.form-container input,
+.form-container button {
+font-size: 24px;
+margin: 10px;
+padding: 10px;
+}
+
+.form-container input {
+border: 1px solid #ccc;
+border-radius: 5px;
+padding: 5px;
+width: 250px;
+height: 30px;
+}
+
+.form-container button {
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+width: 150px;
+height: 40px;
+}
+
+.images-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+padding: 20px;
+}
+
+.image-card {
+width: 300px;
+margin: 20px;
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+border-radius: 5px;
+overflow: hidden;
+}
+
+.image-card img {
+width: 100%;
+height: auto;
+}
+
+.image-card p {
+margin: 10px;
+font-size: 18px;
+}
+
+.bid-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 80vh;
+}
+
+.bid-container label,
+.bid-container input,
+.bid-container button {
+font-size: 24px;
+margin: 10px;
+padding: 10px;
+}
+
+.bid-container input {
+border: 1px solid #ccc;
+border-radius: 5px;
+padding: 5px;
+width: 250px;
+height: 30px;
+}
+
+.bid-container button {
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+width: 150px;
+height: 40px;
+}
+
+.message {
+margin-top: 20px;
+font-size: 18px;
+color: #333;
+text-align: center;
+}
+
+.timer {
+position: fixed;
+bottom: 0;
+right: 0;
+background-color: #333;
+color: #fff;
+padding: 10px;
+font-size: 24px;
+font-weight: bold;
+}

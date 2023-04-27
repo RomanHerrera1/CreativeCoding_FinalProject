@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1 style="padding-top: 20px; padding-left: 35px;">Data Silent Auction</h1>
+	<h2 style="padding-left: 35px; color: grey">Bidding as {{ name }}</h2>
+
+	{% if images %}
+	<ul style="list-style-type: none";>
+		{% for image in images %}
+		<li style="margin-bottom: 50px; padding: 20px; background-color: #f2f2f2; border-radius: 10px; box-shadow: 0px 0px 10px #888888;">
+			<img src="{{ url_for('static', filename='images/' + image['filename']) }}" alt="{{ image['name'] }}"  width="400" style="display: block; margin: 0 auto;">
+			<h2 style="text-align: center;">{{ image['name'] }}</h2>
+			<p style="text-align: center;">Current highest bid: {{ session.get(image['name'] + '_highest_bid', 0) }}</p>
+			{% if session.get(image['name'] + '_highest_bidder') == name %}
+			<p style="text-align: center;">You are currently the highest bidder!</p>
+			{% else %}
+			<p style="text-align: center;">Highest bidder: {{ session.get(image['name'] + '_highest_bidder', 'None') }}</p>
+			<div style="text-align: center;"><a  href="{{ url_for('bid', image_name=image['name'], bidder_name=name) }}">Bid on this image</a></div>
+			{% endif %}
+		</li>
+		{% endfor %}
+	</ul>
+	{% else %}
+	<p>No images found.</p>
+	{% endif %}
+	<script>
+		resetTimer();
+	</script>
+{% endblock %}
+    
