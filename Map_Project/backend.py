@@ -5,10 +5,10 @@ import json
 app = Flask(__name__)
 
 # Google Maps API key
-GOOGLE_MAPS_API_KEY = 'AIzaSyBYPSqaGxAw2iN83-0zPH25lcB84qw068M'
+GOOGLE_MAPS_API_KEY = 'SOME_KEY'
 
 # US Census Bureau API key
-CENSUS_API_KEY = '278e989e44fa95d929981351e4d83aa2676994b3'
+CENSUS_API_KEY = 'SOME_KEY'
 
 @app.route('/')
 def home():
